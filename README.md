@@ -278,5 +278,19 @@ El primer paso es instalar el paquete TypeScript:
 $npm install -D typescript
 ```
 
-Una vez instalado, entraremos a la página del repositorio y nos dirigiremos a Actions, y dentro de dicho apartado bajaremos hasta Continuous integration workflows
+Una vez instalado, entraremos a la página del repositorio y nos dirigiremos a Actions, y dentro de dicho apartado bajaremos hasta Continuous integration.
+Buscaremos `Node.js` y le daremos a `Set up this workflow`. Una vez dentro es importante cambiar el final del fichero por el siguiente contenido:
+
+```
+steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v2
+      with:
+        node-version: ${{ matrix.node-version }}
+    - run: npm install
+    - run: npm test
+```
+
+Y realizamos un commit para guardar el fichero generado. Opcionalmente se puede añadir un `badge` en al informe en las siguientes opciones:
 
