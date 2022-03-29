@@ -1,4 +1,4 @@
-# Práctica 6. Clases e interfaces genéricas. Principios SOLID
+# Práctica X. Testing Project
 **Nombre:** Leonardo Alfonso Cruz Rodríguez  
 **Correo:** alu0101233093@ull.edu.es  
 **Asignatura:** Desarrollo de sistemas informáticos  
@@ -10,10 +10,7 @@
 - [Debugger TypeScript en VSC](#id0.1)
 - [Mocha y Chai - Programación TDD](#id0.2)
 - [Documentación con TypeDoc](#id0.3)
-- [Cubrimiento de código utilizando Instanbul y Coveralls](#id0.4)
-- [Ejercicio 1 - El combate definitivo](#id1)
-- [Ejercicio 2 - DSIflix](#id2)
-- [Ejercicio 3 - El cifrado indescifrable](#id3)
+- [Integración continua de código fuente TypeScript a través de GitHub Action](#id0.4)
 
 ## Creación del directorio de trabajo y tareas previas<a name="id0"></a>
 Antes de empezar el proyecto es necesario instalar diversos paquetes para tener una estructura de directorios adecuada. Para ello el primer paso es crear el directorio principal:
@@ -272,3 +269,14 @@ El script quedaría de la siguiente manera:
 
 Ahora cuando ejecutemos por consola `npm run coverage` en la página del repositorio en `Coveralls` se nos mostrará la información del cubrimiento del código.
 Para añadir el `Batch` del cubrimiento al `README.md` se copiará directamente de la página y se pegará en el fichero.
+
+## Integración continua de código fuente TypeScript a través de GitHub Action<a name="id0.5"></a>
+
+El primer paso es instalar el paquete TypeScript:
+
+```
+$npm install -D typescript
+```
+
+Una vez instalado, entraremos a la página del repositorio y nos dirigiremos a Actions, y dentro de dicho apartado bajaremos hasta Continuous integration workflows
+
