@@ -275,7 +275,13 @@ $npm install -D typescript
 ```
 
 Una vez instalado, entraremos a la página del repositorio y nos dirigiremos a Actions, y dentro de dicho apartado bajaremos hasta Continuous integration.
-Buscaremos `Node.js` y le daremos a `Set up this workflow`. Una vez dentro es importante cambiar el final del fichero por el siguiente contenido:
+![image](https://user-images.githubusercontent.com/72469549/160702017-d769658d-cfc4-4ecc-a0d5-ca4caa187c8f.png)  
+
+Buscaremos `Node.js` y le daremos a `Set up this workflow`.
+
+![image](https://user-images.githubusercontent.com/72469549/160702039-bf36ceec-f903-4155-8450-32a70b19f276.png)  
+
+Una vez dentro es importante cambiar el final del fichero por el siguiente contenido:
 
 ```
 steps:
@@ -289,3 +295,7 @@ steps:
 ```
 
 Y realizamos un commit para guardar el fichero generado. Opcionalmente se puede añadir un `badge` en al informe en las siguientes opciones:
+
+![image](https://user-images.githubusercontent.com/72469549/160701932-68d8d9b2-d347-49eb-90c7-76736f17073f.png)
+
+![image](https://user-images.githubusercontent.com/72469549/160701954-2845ea6d-4a1e-4aaf-88c6-31a35a0ee546.png)
