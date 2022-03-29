@@ -299,3 +299,37 @@ Y realizamos un commit para guardar el fichero generado. Opcionalmente se puede 
 ![image](https://user-images.githubusercontent.com/72469549/160701932-68d8d9b2-d347-49eb-90c7-76736f17073f.png)
 
 ![image](https://user-images.githubusercontent.com/72469549/160701954-2845ea6d-4a1e-4aaf-88c6-31a35a0ee546.png)
+
+A continuación crearemos el fichero `coveralls.yml` y le pondremos el siguiente contenido:
+
+```yml
+name: Coveralls
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Cloning repo
+      uses: actions/checkout@v2
+    - name: Use Node.js 16.x
+      uses: actions/setup-node@v2
+      with:
+        node-version: 16.x
+    - name: Installing dependencies
+      run: npm install
+    - name: Generating coverage information
+      run: npm run coverage
+    - name: Coveralls GitHub Action
+      uses: coverallsapp/github-action@master
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+
+```
