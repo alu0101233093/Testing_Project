@@ -3,7 +3,8 @@
 **Correo:** alu0101233093@ull.edu.es  
 **Asignatura:** Desarrollo de sistemas informáticos  
 
-[![Coverage Status](https://coveralls.io/repos/github/ULL-ESIT-INF-DSI-2122/ull-esit-inf-dsi-21-22-prct06-generics-solid-alu0101233093/badge.svg?branch=master)](https://coveralls.io/github/ULL-ESIT-INF-DSI-2122/ull-esit-inf-dsi-21-22-prct06-generics-solid-alu0101233093?branch=master)  
+[![Coverage Status](https://coveralls.io/repos/github/ULL-ESIT-INF-DSI-2122/ull-esit-inf-dsi-21-22-prct06-generics-solid-alu0101233093/badge.svg?branch=master)](https://coveralls.io/github/ULL-ESIT-INF-DSI-2122/ull-esit-inf-dsi-21-22-prct06-generics-solid-alu0101233093?branch=master)
+[![Tests](https://github.com/alu0101233093/Testing_Project/actions/workflows/node.js.yml/badge.svg)](https://github.com/alu0101233093/Testing_Project/actions/workflows/node.js.yml)
 
 ## Índice
 - [Creación del directorio de trabajo y tareas previas](#id0)
