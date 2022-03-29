@@ -56,6 +56,8 @@ node_modules/
 dist/
 package-lock.json
 .vscode/
+/coverage
+/.nyc_output
 ```
 Ahora si, y para finalizar, iniciaremos el repositorio git y añadiremos el remoto:
 ```bash
@@ -254,18 +256,11 @@ A continuación debemos entrar a la página web <a href = "http://www.coveralls.
 
 **Imagen de la página con el repositorio**
 
-Una vez habilitado, entraremos en `details` y copiaremos la línea donde pone *repo_token*. Después crearemos el archivo `.coveralls.yml` y añadiremos dicha línea.
-El archivo quedaría de la siguiente manera:
-
-```
-repo_token: RA8doCOxxJr3ALE8PDVTh3g0AAmYBcPQW
-```
-
-El siguiente paso sería añadir al script `coverage` en el fichero `package.json` los comandos `nyc report --reporter=text-lcov | coveralls && rm -rfv .nyc_output`.
+El siguiente paso sería añadir al script `coverage` en el fichero `package.json` el comando `nyc report --reporter=lcov`.
 El script quedaría de la siguiente manera:
 
 ```json
-"coverage": "nyc npm test && nyc report --reporter=text-lcov | coveralls && rm -rfv .nyc_output"
+"coverage": "nyc npm test && nyc report --reporter=lcov"
 ```
 
 Ahora cuando ejecutemos por consola `npm run coverage` en la página del repositorio en `Coveralls` se nos mostrará la información del cubrimiento del código.
@@ -294,4 +289,3 @@ steps:
 ```
 
 Y realizamos un commit para guardar el fichero generado. Opcionalmente se puede añadir un `badge` en al informe en las siguientes opciones:
-
