@@ -333,3 +333,5 @@ jobs:
         github-token: ${{ secrets.GITHUB_TOKEN }}
 
 ```
+
+Ahora con cada push se comprobarán los tests y el recubrimiento de código automáticamente y se podrá revisar en Github Actions.
