@@ -11,7 +11,9 @@
 - [Debugger TypeScript en VSC](#id0.1)
 - [Mocha y Chai - Programación TDD](#id0.2)
 - [Documentación con TypeDoc](#id0.3)
-- [Integración continua de código fuente TypeScript a través de GitHub Action](#id0.4)
+- [Cubrimiento de código utilizando Instanbul y Coveralls](#id0.4)
+- [Integración continua de código fuente TypeScript a través de GitHub Action](#id0.5)
+- [Calidad y seguridad del código fuente mediante Sonar Cloud](#id0.6)
 
 ## Creación del directorio de trabajo y tareas previas<a name="id0"></a>
 Antes de empezar el proyecto es necesario instalar diversos paquetes para tener una estructura de directorios adecuada. Para ello el primer paso es crear el directorio principal:
@@ -335,3 +337,5 @@ jobs:
 ```
 
 Ahora con cada push se comprobarán los tests y el recubrimiento de código automáticamente y se podrá revisar en Github Actions.
+
+## Integración continua de código fuente TypeScript a través de GitHub Action<a name="id0.6"></a>
